@@ -1,7 +1,18 @@
+import { useSelector } from "react-redux";
+import { rest_auth_login_create } from "../../store/edgyselfsourceapAPI/tokens.slice.js";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import React, { useState } from "react";
 import { SafeAreaView, TextInput, Button, StyleSheet } from "react-native";
 
 const SearchScreen = () => {
+  const {
+    entities: console
+  } = useSelector(state => state.console);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(rest_auth_login_create());
+  }, []);
   const [movieName, setMovieName] = useState("");
 
   const handleSearch = () => {

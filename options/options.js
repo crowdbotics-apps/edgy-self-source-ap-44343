@@ -1,10 +1,11 @@
 export const globalOptions = {
-  name: "edgy-self-source-ap-44343",
-  url: "https://edgy-self-source-ap-44343.botics.co",
-  api: "https://edgy-self-source-ap-44343.botics.co/api/v1",
-  screenOptions: {
-    headerShown: false
-  }
+  "name": "edgy-self-source-ap-44343",
+  "url": "https://edgy-self-source-ap-44343.botics.co",
+  "api": "https://edgy-self-source-ap-44343.botics.co/api/v1",
+  "screenOptions": {
+    "headerShown": false
+  },
+  "initialRoute": "welcome"
 };
 export const modulesOptions = {
   "@modules/app-menu": {
