@@ -16,6 +16,7 @@ const SearchScreen = () => {
   const [movieName, setMovieName] = useState("");
 
   const handleSearch = () => {
+    alert("Searching for movie: ", movieName);
     console.log("Searching for movie: ", movieName);
   };
 
