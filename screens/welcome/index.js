@@ -20,9 +20,15 @@ const SearchScreen = () => {
     console.log("Searching for movie: ", movieName);
   };
 
+  const handleFAQ = () => {
+    alert("handleFAQ: ", movieName);
+    console.log("handleFAQ: ", movieName);
+  };
+
   return <SafeAreaView style={styles.container}>
       <TextInput style={styles.input} onChangeText={setMovieName} value={movieName} placeholder="Enter movie name" />
       <Button title="Search" onPress={handleSearch} />
+      <Button title="FAQ" onPress={handleFAQ} />
     </SafeAreaView>;
 };
 
@@ -38,6 +44,16 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 16,
     padding: 8
+  },
+  IlXwAvYz: {
+    position: "relative",
+    left: 27,
+    top: 1179,
+    backgroundColor: "#NaNNaNNaN",
+    flexDirection: "row",
+    flex: 1,
+    alignItems: "end",
+    justifyContent: "flex-end"
   }
 });
 export default SearchScreen;
