@@ -7,6 +7,9 @@ import { SafeAreaView, TextInput, Button, StyleSheet } from "react-native";
 
 const SearchScreen = () => {
   const {
+    entities: UserDetails
+  } = useSelector(state => state.UserDetails);
+  const {
     entities: console
   } = useSelector(state => state.console);
   const dispatch = useDispatch();
@@ -26,7 +29,7 @@ const SearchScreen = () => {
   };
 
   return <SafeAreaView style={styles.container}>
-      <TextInput style={styles.input} onChangeText={setMovieName} value={movieName} placeholder="Enter movie name" />
+      <TextInput style={styles.input} onChangeText={setMovieName} value={movieName} placeholder={"Enter movie name: " + UserDetails.email} data={UserDetails} />
       <Button title="Search" onPress={handleSearch} />
       <Button title="FAQ" onPress={handleFAQ} />
     </SafeAreaView>;
@@ -44,16 +47,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 16,
     padding: 8
-  },
-  IlXwAvYz: {
-    position: "relative",
-    left: 27,
-    top: 1179,
-    backgroundColor: "#NaNNaNNaN",
-    flexDirection: "row",
-    flex: 1,
-    alignItems: "end",
-    justifyContent: "flex-end"
   }
 });
 export default SearchScreen;
